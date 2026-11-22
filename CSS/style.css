@@ -8,3 +8,27 @@
 body {
     height: 100vh;
 }
+
+.bispo-logo {
+    width: 150px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    font-size: 25px;
+    font-weight: 700;
+    color: rgb(0, 64, 166);
+    transition: 0.3s;
+}
