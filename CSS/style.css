@@ -19,14 +19,14 @@ header {
     justify-content: center;
 }
 
-a {
+.link-header {
     font-size: 20px;
     font-weight: 500;
     text-decoration: none;
     cursor: pointer;
 }
 
-a:hover {
+.link-header:hover {
     font-size: 25px;
     font-weight: 700;
     color: rgb(0, 64, 166);
