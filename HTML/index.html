@@ -50,7 +50,7 @@
                 <div class="div-2">
                 <p class="p-div2">Não fique mais gastando seu dinheiro com serviços sem qualidade e demorados. 
                     Venha com a Bispo Reforma. Clique no Botão e faça seu orçamento.</p>
-                <button>Solicitar Orçamento</button>
+                <button type="button" id="abrir-formulario">Solicitar Orçamento</button>
             </div>
         </div>
         <div class="div-3">
@@ -69,7 +69,11 @@
         </a>
     </div>
 
-    <form>
+    <div class="form-backdrop" id="form-backdrop" aria-hidden="true"></div>
+
+    <form id="form-orcamento" role="dialog" aria-modal="true" aria-labelledby="titulo-formulario" aria-hidden="true" tabindex="-1">
+        <button type="button" class="form-close" id="fechar-formulario" aria-label="Fechar formulário">&times;</button>
+        <h2 id="titulo-formulario">Solicite seu orçamento</h2>
         <!--Nome-->
         <label for="name">Nome:</label>
         <input type="text" id="name" placeholder="Digite seu nome">

@@ -167,9 +167,65 @@ form {
     justify-content: center;
     gap: 15px;
     background-color: #FFF;
-    width: 500px;
-    height: 870px;
+    width: min(500px, calc(100vw - 32px));
+    max-height: calc(100vh - 32px);
+    overflow-y: auto;
     border-radius: 20.5px;
+    padding: 32px 24px;
+    position: fixed;
+    z-index: 12;
+    top: 50%;
+    left: 50%;
+    transform: translate(-150vw, -50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: transform 450ms ease, opacity 350ms ease, visibility 450ms;
+}
+
+form.is-open {
+    transform: translate(-50%, -50%);
+    visibility: visible;
+    opacity: 1;
+}
+
+form h2 {
+    color: #17212b;
+    text-align: center;
+}
+
+.form-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 11;
+    background: rgba(0, 0, 0, 0.68);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 350ms ease, visibility 350ms;
+}
+
+.form-backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.form-close {
+    align-self: flex-end;
+    width: 40px;
+    height: 40px;
+    margin: -16px -8px -8px 0;
+    background: transparent;
+    color: #17212b;
+    font-size: 30px;
+    line-height: 1;
+}
+
+.form-close:hover {
+    width: 40px;
+    height: 40px;
+    margin-top: -16px;
+    transform: none;
+    box-shadow: none;
+    font-size: 30px;
 }
 
 label {
@@ -210,4 +266,11 @@ textarea:focus {
     border-color: rgb(0, 110, 255);
     box-shadow: 0 0 10px rgba(0, 110, 255, 0.6);
     transition: 0.3s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    form,
+    .form-backdrop {
+        transition-duration: 0.01ms;
+    }
 }
