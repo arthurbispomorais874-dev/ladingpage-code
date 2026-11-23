@@ -142,3 +142,19 @@ video {
     width: 100%;
     height: 100%;
 }
+
+.div-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.whatsapp {
+    width: 70px;
+}
+
+.whatsapp:hover {
+    width: 80px;
+    transition: 0.4s;
+}
