@@ -76,23 +76,23 @@
         <h2 id="titulo-formulario">Solicite seu orçamento</h2>
         <!--Nome-->
         <label for="name">Nome:</label>
-        <input type="text" id="name" placeholder="Digite seu nome">
+        <input type="text" id="name" name="nome" placeholder="Digite seu nome" required>
 
         <!--Email-->
         <label for="email">Email:</label>
-        <input type="email" id="email" placeholder="Digite seu melhor email">
+        <input type="email" id="email" name="email" placeholder="Digite seu melhor email" required>
 
         <!--Endereço-->
         <label for="endereco">Endereço:</label>
-        <input type="text" id="endereco" placeholder="Digite seu endereço">
+        <input type="text" id="endereco" name="endereco" placeholder="Digite seu endereço" required>
 
         <!--Telefone-->
         <label for="tel">Telefone:</label>
-        <input type="tel" placeholder="Digite seu número de telefone">
+        <input type="tel" id="tel" name="telefone" placeholder="Digite seu número de telefone" required>
 
         <!--Mensagem-->
         <label for="pedido">Descreve o seu pedido:</label>
-        <textarea id="pedido" placeholder="Descreva o que você quer. Ex: 'Quero uma reforma na minha cozinha'. Descreva o máximo que puder." ></textarea>
+        <textarea id="pedido" name="pedido" placeholder="Descreva o que você quer. Ex: 'Quero uma reforma na minha cozinha'. Descreva o máximo que puder." required></textarea>
 
         <button type="submit">Enviar</button>
     </form>

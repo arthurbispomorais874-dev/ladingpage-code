@@ -30,3 +30,24 @@ document.addEventListener("keydown", (evento) => {
         fecharModal();
     }
 });
+
+formulario.addEventListener("submit", (evento) => {
+    evento.preventDefault();
+
+    if (emailDestino === "ARTHURBISPOMORAIS874@GMAIL.COM") {
+        alert("Configure o e-mail que receberá os pedidos no arquivo JS/script.js.");
+        return;
+    }
+
+    const dados = new FormData(formulario);
+    const assunto = encodeURIComponent("Solicitação de orçamento | Bispo Reforma");
+    const mensagem = encodeURIComponent(
+        `Nome: ${dados.get("nome").trim()}\n` +
+        `E-mail para contato: ${dados.get("email").trim()}\n` +
+        `Endereço da obra: ${dados.get("endereco").trim()}\n` +
+        `Telefone: ${dados.get("telefone").trim()}\n\n` +
+        `Descrição do pedido:\n${dados.get("pedido").trim()}`
+    );
+
+    window.location.assign(`mailto:${emailDestino}?subject=${assunto}&body=${mensagem}`);
+});
