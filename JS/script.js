@@ -2,7 +2,7 @@ const abrirFormulario = document.querySelector("#abrir-formulario");
 const fecharFormulario = document.querySelector("#fechar-formulario");
 const formulario = document.querySelector("#form-orcamento");
 const fundoFormulario = document.querySelector("#form-backdrop");
-const emailDestino = "ARTHURBISPOMORAIS874@GMAIL.COM";
+const emailDestino = "BISPOREFORMA@GMAIL.COM";
 
 function abrirModal() {
     formulario.classList.add("is-open");
