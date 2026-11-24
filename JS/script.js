@@ -2,6 +2,7 @@ const abrirFormulario = document.querySelector("#abrir-formulario");
 const fecharFormulario = document.querySelector("#fechar-formulario");
 const formulario = document.querySelector("#form-orcamento");
 const fundoFormulario = document.querySelector("#form-backdrop");
+const emailDestino = "ARTHURBISPOMORAIS874@GMAIL.COM";
 
 function abrirModal() {
     formulario.classList.add("is-open");
@@ -34,10 +35,6 @@ document.addEventListener("keydown", (evento) => {
 formulario.addEventListener("submit", (evento) => {
     evento.preventDefault();
 
-    if (emailDestino === "ARTHURBISPOMORAIS874@GMAIL.COM") {
-        alert("Configure o e-mail que receberá os pedidos no arquivo JS/script.js.");
-        return;
-    }
 
     const dados = new FormData(formulario);
     const assunto = encodeURIComponent("Solicitação de orçamento | Bispo Reforma");
